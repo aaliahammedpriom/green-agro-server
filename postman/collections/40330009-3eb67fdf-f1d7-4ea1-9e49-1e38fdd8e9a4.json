@@ -1,0 +1,2819 @@
+{
+	"info": {
+		"_postman_id": "40330009-3eb67fdf-f1d7-4ea1-9e49-1e38fdd8e9a4",
+		"name": "Marcus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/auth",
+			"item": [
+				{
+					"name": "/csrf-token",
+					"id": "40330009-ab34998b-dab7-4038-998a-7f69e7e9e185",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base}}/auth/csrf-token",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"auth",
+								"csrf-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"id": "40330009-bd2a8283-c46d-48bd-b794-37bca1262866",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "w8abdullah00023@gmail.com",
+									"type": "text",
+									"uuid": "ff64467a-1859-4f56-8f11-a355f543bbdf"
+								},
+								{
+									"key": "password",
+									"value": "aaliahammedpriom66@gmail.comM",
+									"type": "text",
+									"uuid": "a450c45d-a8f7-4126-b045-3a8e4e4e8de9"
+								},
+								{
+									"key": "firstName",
+									"value": "A Ali Ahammed Priom",
+									"type": "text",
+									"uuid": "ecbad4a9-f09e-4225-bf60-00b7d644a0a7"
+								},
+								{
+									"key": "roles[]",
+									"value": "INSTRUCTOR",
+									"description": "for instructor",
+									"type": "text",
+									"uuid": "47141255-3859-494e-b767-bbe115b5f157"
+								},
+								{
+									"key": "preferredTime",
+									"value": "AFTERNOON",
+									"description": "for instructor",
+									"type": "text",
+									"uuid": "a7807867-2a1f-4b78-b077-844f53f2c11c"
+								},
+								{
+									"key": "beach[]",
+									"value": "cmo9s50y40000tqrsqb6w0e9s",
+									"description": "for instructor",
+									"type": "text",
+									"uuid": "26ab1371-e85a-488c-9220-092d08b12cd2"
+								},
+								{
+									"key": "skill",
+									"value": "BEGINNER",
+									"description": "for instructor",
+									"type": "text",
+									"uuid": "8d2bf9e3-2e3e-48ed-bd78-b91f718a3a04"
+								},
+								{
+									"key": "whatsapp",
+									"value": "+8801791845448",
+									"description": "for instructor",
+									"type": "text",
+									"uuid": "a417f5b1-1827-41bb-a6c1-2f80c6638847"
+								},
+								{
+									"key": "message",
+									"value": "hello buddy",
+									"description": "for instructor",
+									"type": "text",
+									"uuid": "5bb54c7b-270d-46fc-b767-dc5f5872b14a"
+								},
+								{
+									"key": "photoUrl",
+									"type": "file",
+									"uuid": "9567ec05-3518-4c42-872d-adf0a35412f7",
+									"src": "/C:/Users/A ALI AHAMMED PRIOM/Desktop/64b208d6-1f9c.webp"
+								},
+								{
+									"key": "license",
+									"type": "file",
+									"uuid": "1bbee3bc-8a6f-4ed4-9c06-ea5cc8082411",
+									"src": "/C:/Users/A ALI AHAMMED PRIOM/Desktop/sydney/RoutePayroll_Backend_SRS_v2_final _one.pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/auth/register",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify-email",
+					"id": "40330009-609465db-bb1a-4e73-bfac-f9138786d3db",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "w8abdullah0001@gmail.com",
+									"type": "text",
+									"uuid": "b9d52a54-ad57-4be7-8bce-409cdec58c04"
+								},
+								{
+									"key": "otp",
+									"value": "974895",
+									"type": "text",
+									"uuid": "6734fafc-5b96-4272-8eed-045be18409ac"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/auth/verify-email",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"auth",
+								"verify-email"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNtbjV2ZGN1eDAwMDB0cXk0YXpoOXRidXkiLCJlbWFpbCI6ImFhbGlhaGFtbWVkcHJpb202NkBnbWFpbC5jb20iLCJvdHAiOiI1NTY4MzYiLCJvdHBFeHBpcmVzQXQiOiIyMDI2LTAzLTI1VDEwOjA3OjA2LjAwNloiLCJpYXQiOjE3NzQ0MzI2MjYsImV4cCI6MTc3NDUxOTAyNn0.-g_0RHFBKLjuywCcDACGZfF3GVvoxT0ke0dRHaX9d90",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resend-verification",
+					"id": "40330009-326bc856-7c21-4bdf-893c-c35b55abc834",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accesstoken",
+								"value": "{{vault:json-web-token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"aaliahammedpriom66@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}/auth/resend-verification",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"auth",
+								"resend-verification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"id": "40330009-4861dfd3-daf7-447e-b8a3-e7f5136bdc1f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "csrf-token",
+								"value": "UVFQsCfY-Rihq0L_xLYxr1tUGo0dosm6RzwA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "admin@dev.com",
+									"type": "text",
+									"uuid": "7ac97415-55b3-4c4d-8d1e-1969efe546e1",
+									"description": "admin"
+								},
+								{
+									"key": "password",
+									"value": "admin@dev.com1M",
+									"type": "text",
+									"uuid": "40506b29-69b8-45eb-8672-784016600d22"
+								},
+								{
+									"key": "email",
+									"value": "aaliahammedpriom66@gmail.com",
+									"type": "text",
+									"uuid": "703dc13d-158d-4fb1-a48c-65b91a24314f",
+									"description": "instructor",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "w8abdullah0001@gmail.com",
+									"description": "turist",
+									"type": "text",
+									"uuid": "51c26864-57e1-47ec-82a1-03ecb0c8b562",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "261-56-006@diu.edu.bd",
+									"description": "turist",
+									"type": "text",
+									"uuid": "3c58fd0f-df26-4993-8481-9c0c1753a604",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "abdullah107189@gmail.com",
+									"description": "turist",
+									"type": "text",
+									"uuid": "ca17f726-984f-42f0-bc55-3d8dc094697f",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "w8abdullah00023@gmail.com",
+									"description": "instructor",
+									"type": "text",
+									"uuid": "8d5db912-6141-4789-9604-e9ded4836909",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "aaliahammedpriom66@gmail.comM",
+									"type": "text",
+									"uuid": "f1d0b18e-ecac-4d19-becf-8f609294709e",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/auth/login",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh-token",
+					"id": "40330009-44989b48-9d9b-4ab0-bf60-b195b106ffdc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "csrf-token",
+								"value": "AFBkip1W-XvNg5omzyxCnu3sl_Q1xhVweOfM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refreshToken\":\"frerfdsfvsdfsdafdsf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}/auth/refresh-token",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"auth",
+								"refresh-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"id": "40330009-08beb55b-330c-4a99-b3f8-f655e9c513b1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "csrf-token",
+								"value": "Aq18MMpi-pa2LCG_L-KN9M-lUYIFpG32JwYM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "allDevices",
+									"value": "true",
+									"type": "text",
+									"uuid": "4bc04f77-c0d8-444d-8b3e-103bcfe0912f"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/auth/logout",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "invite",
+					"id": "40330009-3d0a3bb3-8a70-4a7e-a3d2-953c51014d8c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "sibok57079@soco7.com",
+									"type": "text",
+									"uuid": "f0e37898-bdfe-44ad-b410-83b24842854e"
+								},
+								{
+									"key": "role",
+									"value": "manager",
+									"type": "text",
+									"uuid": "7cfa95fa-c829-4ece-a354-27a954398497"
+								},
+								{
+									"key": "name",
+									"value": "Zawa",
+									"type": "text",
+									"uuid": "b5526c28-c14e-4e1f-947b-86787acfc547"
+								},
+								{
+									"key": "phone",
+									"value": "01712345678",
+									"type": "text",
+									"uuid": "ec0d258c-418c-4103-9c68-51f07d3ece6e"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/auth/invite",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"auth",
+								"invite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forgot-password",
+					"id": "40330009-14989267-9940-45ad-b0bf-366ddb03aedb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"aaliahammedpriom66@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}/auth/forgot-password",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"auth",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify-forgot-password",
+					"id": "40330009-b0b41716-2316-4800-9707-5782756e7ecd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"aaliahammedpriom66@gmail.com\",\r\n    \"otp\": \"658107\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}/auth/verify-forgot-password",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"auth",
+								"verify-forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reset-password",
+					"id": "40330009-91670dff-45d9-4af1-b285-b1e01362e1b4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"resetToken\": \"890a3cfeee2e2630cd7db559af727ebafd3e6a64682b674f4fd6d1e0e325f261\",\r\n    \"newPassword\": \"aaliahammedpriom66@gmail.comM\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}/auth/reset-password",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"auth",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "me",
+					"id": "40330009-29b8abaf-a0a8-4367-aa4b-bec1abf27a7a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base}}/auth/me",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change-password",
+					"id": "40330009-0b31f09b-dcdb-4890-a28b-90d2be142c1a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"currentPassword\": \"apriom@softvence.comM4\",\r\n    \"newPassword\": \"priom@softvence.comM6\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}/auth/change-password",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"auth",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/me update profile info",
+					"id": "40330009-95cbedca-25af-4bde-bf38-5608e6f88da7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstName",
+									"value": "test",
+									"description": "common field",
+									"type": "text",
+									"uuid": "78a5b93f-51ef-4704-bbc2-b4a13b3b7800",
+									"disabled": true
+								},
+								{
+									"key": "lastName",
+									"value": "test",
+									"description": "common field",
+									"type": "text",
+									"uuid": "5fe67bad-e262-4349-aed1-ce95489c1701",
+									"disabled": true
+								},
+								{
+									"key": "photoUrl[]",
+									"type": "text",
+									"uuid": "30e6cd82-4751-44e6-979d-d9f2322830ca",
+									"value": "https://res.cloudinary.com/dscqp4wwt/image/upload/v1777183399/MARCUS/photoUrl/nrneomih5wh17wv4m8eww2.jpg"
+								},
+								{
+									"key": "about",
+									"value": "",
+									"type": "text",
+									"uuid": "53c91c80-519a-4874-9523-0c97b6d3fe98",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "",
+									"type": "text",
+									"uuid": "b256862d-4051-4d5e-b382-fc106df5e8c2",
+									"disabled": true
+								},
+								{
+									"key": "whatsapp",
+									"value": "",
+									"type": "text",
+									"uuid": "7716ced0-0794-44a5-a7c3-0e000b243bb0",
+									"disabled": true
+								},
+								{
+									"key": "emailOnCommentOnArticle",
+									"value": "false",
+									"type": "text",
+									"uuid": "e1d8306c-4992-453c-ac5c-0bdcfd0b0462",
+									"disabled": true
+								},
+								{
+									"key": "emailOnAnswerOnForm",
+									"value": "",
+									"type": "text",
+									"uuid": "19bf3509-f717-4524-98e6-bb08d3955168",
+									"disabled": true
+								},
+								{
+									"key": "emailOnFollow",
+									"value": "",
+									"type": "text",
+									"uuid": "bbfeee2d-a12c-40f3-9317-e2111b986175",
+									"disabled": true
+								},
+								{
+									"key": "newsAndAnnouncements",
+									"value": "",
+									"type": "text",
+									"uuid": "f7ae4681-8490-47fd-bf25-529ae9488c1b",
+									"disabled": true
+								},
+								{
+									"key": "weeklyProductUpdates",
+									"value": "",
+									"type": "text",
+									"uuid": "aa1b55fc-86a5-4227-aa20-ea835ddd6f67",
+									"disabled": true
+								},
+								{
+									"key": "weeklyBlogDigest",
+									"value": "",
+									"type": "text",
+									"uuid": "3b5b43d9-89d2-43ad-bb97-a7fdd5260ef3",
+									"disabled": true
+								},
+								{
+									"key": "skill",
+									"value": "",
+									"type": "text",
+									"uuid": "544ef409-044a-4f55-af76-48c7661b3d02",
+									"disabled": true
+								},
+								{
+									"key": "experience",
+									"value": "",
+									"type": "text",
+									"uuid": "1915da7a-ae0d-4d92-9dad-1d70deb4e8cb",
+									"disabled": true
+								},
+								{
+									"key": "languages",
+									"value": "",
+									"type": "text",
+									"uuid": "c64adedf-7600-4588-8119-1b35b6ca62a1",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/auth/me",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/user-info",
+					"id": "40330009-87a2949a-0568-4d04-8619-315997cf0706",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base}}/auth/user-info",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"auth",
+								"user-info"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "40330009-ddca6bb1-41b6-4287-9863-6d90f1a2a81b"
+		},
+		{
+			"name": "request",
+			"item": [
+				{
+					"name": "manage",
+					"id": "40330009-706889d7-8fa4-4a62-8e20-9e89fa08c92b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "csrf-token",
+								"value": "UVFQsCfY-Rihq0L_xLYxr1tUGo0dosm6RzwA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "cmodrcduc0000tq6wd3p4jtw2",
+									"type": "text",
+									"uuid": "6f9f5b16-940e-421b-957b-69e86a604c81"
+								},
+								{
+									"key": "isVerified",
+									"value": "false",
+									"type": "text",
+									"uuid": "9a1dd66d-831f-4292-a558-1cc303f240b8"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/request/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"request",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"id": "40330009-e9f884ac-e23d-4782-9cf6-b93d66af386e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "csrf-token",
+								"value": "UVFQsCfY-Rihq0L_xLYxr1tUGo0dosm6RzwA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "isDeleted",
+									"value": "true",
+									"type": "text",
+									"uuid": "e0a498ea-09fb-42de-802e-4854973d3032",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "",
+									"type": "text",
+									"uuid": "9a2daacb-d636-4df8-ae1d-62de17a5c032",
+									"disabled": true
+								},
+								{
+									"key": "isVerified",
+									"value": "false",
+									"type": "text",
+									"uuid": "2066ba9e-5b93-4623-9251-effbc39600da",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/request?limit=1&role=USER",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"request"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1"
+								},
+								{
+									"key": "role",
+									"value": "USER"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "40330009-aca87f6c-bd0d-4af1-944c-e52f38dc567a"
+		},
+		{
+			"name": "lead",
+			"item": [
+				{
+					"name": "manage",
+					"id": "40330009-ed1dfc48-d810-4906-abdd-ba79a338dead",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "csrf-token",
+								"value": "UVFQsCfY-Rihq0L_xLYxr1tUGo0dosm6RzwA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "cmotu8uj70001tqegmztip9hr",
+									"type": "text",
+									"uuid": "ea7c08b4-8486-4696-8be1-bb585d8a4426"
+								},
+								{
+									"key": "instructorId",
+									"value": "cmobbqcte0007tqmwtxg7e00j",
+									"type": "text",
+									"uuid": "b1eeaa8c-bc86-4b6d-94f9-66515a27f59d",
+									"disabled": true
+								},
+								{
+									"key": "beachId",
+									"value": "cmo9s50y40000tqrsqb6w0e9s",
+									"type": "text",
+									"uuid": "b5e0d50a-6aef-461a-97d6-f21e1453611b",
+									"disabled": true
+								},
+								{
+									"key": "skillLevel",
+									"value": "BEGINNER",
+									"type": "text",
+									"uuid": "a0d900a7-33ef-4153-9aec-e57ee6787e56",
+									"disabled": true
+								},
+								{
+									"key": "preferredDate",
+									"value": "2026-05-23T00:00:00.000Z",
+									"type": "text",
+									"uuid": "fc84030c-c141-485d-9949-b1f8cc535e5f",
+									"disabled": true
+								},
+								{
+									"key": "message",
+									"value": "",
+									"type": "text",
+									"uuid": "670ac176-1b91-4b69-8bd5-2b4ef4d1f339",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "ACCEPTED",
+									"type": "text",
+									"uuid": "a88a27a6-8aee-4dbc-993f-ab9d73b66e71"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/lead/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"lead",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get",
+					"id": "40330009-48ede4e1-5a37-4fda-ab0f-c0f9241caff7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "b28a32f3-14e3-4792-b7cc-3151afa31626",
+									"type": "text",
+									"uuid": "00d5386f-ef09-4d78-804e-b5c5d889b876",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "ACCEPTED",
+									"type": "text",
+									"uuid": "3c9e5b57-fdab-4dc9-8e1c-2d88240142b8",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/lead/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"lead",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete beach",
+					"id": "40330009-16fedac6-dfae-4ac5-9039-1eabc8762846",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "cmo9sdmyf0002tqoojdc9gd4t",
+									"type": "text",
+									"uuid": "f862e716-98a8-4238-8a82-05937fdaafc5"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/beach/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"beach",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "webhook post",
+					"id": "40330009-ce0740f8-0650-4250-86c9-ec8b19ec2d12",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}/lead/webhook",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"lead",
+								"webhook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "webhook get",
+					"id": "40330009-996ec69c-dcb0-40a4-bf05-8d331f67d8cf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/lead/webhook",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"lead",
+								"webhook"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "40330009-e20bdb6b-f028-4045-837f-f7c5ee2a9d27"
+		},
+		{
+			"name": "beach",
+			"item": [
+				{
+					"name": "all beach",
+					"id": "40330009-0ead8073-5963-44d1-a078-be11776b15cd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "csrf-token",
+								"value": "UVFQsCfY-Rihq0L_xLYxr1tUGo0dosm6RzwA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "cmo9s50y40000tqrsqb6w0e9s",
+									"type": "text",
+									"uuid": "ea7c08b4-8486-4696-8be1-bb585d8a4426"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/beach/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"beach",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "manage beach",
+					"id": "40330009-1a307677-dab9-4598-b3ca-e399c4a4ba33",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "cmo88bgfr0000tq9s5pqigc8d",
+									"type": "text",
+									"uuid": "00d5386f-ef09-4d78-804e-b5c5d889b876",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "ulluatue",
+									"type": "text",
+									"uuid": "3c9e5b57-fdab-4dc9-8e1c-2d88240142b8"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/beach/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"beach",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete beach",
+					"id": "40330009-f04fb752-39f2-42e8-90f0-9c8dc336378c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "cmo9sdmyf0002tqoojdc9gd4t",
+									"type": "text",
+									"uuid": "f862e716-98a8-4238-8a82-05937fdaafc5"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/beach/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"beach",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "40330009-7549c95c-a0a7-4a81-813a-dbd43e63f823"
+		},
+		{
+			"name": "beach page",
+			"item": [
+				{
+					"name": "all beach page",
+					"id": "40330009-b4dd3e6f-b721-4f16-825d-027a4c5599d9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "csrf-token",
+								"value": "UVFQsCfY-Rihq0L_xLYxr1tUGo0dosm6RzwA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "cmo9syl75000ftq5k8dlbqkjd",
+									"type": "text",
+									"uuid": "ea7c08b4-8486-4696-8be1-bb585d8a4426",
+									"disabled": true
+								},
+								{
+									"key": "beachId",
+									"value": "cmo9s50y40000tqrsqb6w0e9s",
+									"type": "text",
+									"uuid": "4cfb22c1-1152-4a59-bde3-a805d4c6026b",
+									"disabled": true
+								},
+								{
+									"key": "data",
+									"value": "View instructor profiles",
+									"type": "text",
+									"uuid": "dc3cb654-2698-423a-96f0-c4d0ab876834"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/beach-page/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"beach-page",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "manage beach page",
+					"id": "40330009-b9ac2938-6d0e-4c60-af0a-6aed4195f00f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base}}/beach-page/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"beach-page",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete beach page",
+					"id": "40330009-28a92951-a40d-451e-a2b3-e331c4066224",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "cmo9sb0bm0001tqootjc1216i",
+									"type": "text",
+									"uuid": "f862e716-98a8-4238-8a82-05937fdaafc5"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/beach-page/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"beach-page",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "40330009-5eb5bce5-58db-4161-96a2-8692816333af"
+		},
+		{
+			"name": "pages",
+			"item": [
+				{
+					"name": "all page",
+					"id": "40330009-85212727-4a0d-4454-9cf8-ca8ff90c1b9d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "csrf-token",
+								"value": "UVFQsCfY-Rihq0L_xLYxr1tUGo0dosm6RzwA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text",
+									"uuid": "ea7c08b4-8486-4696-8be1-bb585d8a4426",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "login",
+									"type": "text",
+									"uuid": "7a556afa-658d-485d-9fbf-5e6b7883dbea"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/pages/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"pages",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "manage page",
+					"id": "40330009-ca2d0f78-0892-4ecc-8156-91d66f5da597",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "cmoazkogf0005tqek9iuc6cfw",
+									"type": "text",
+									"uuid": "00d5386f-ef09-4d78-804e-b5c5d889b876"
+								},
+								{
+									"key": "name",
+									"value": "test1",
+									"type": "text",
+									"uuid": "3c9e5b57-fdab-4dc9-8e1c-2d88240142b8"
+								},
+								{
+									"key": "slug",
+									"value": "test1",
+									"type": "text",
+									"uuid": "cd991690-575c-4807-be59-f01c244b6a49"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/pages/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"pages",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete page",
+					"id": "40330009-f3ddf780-35c1-4308-b863-89cacb2077b6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "cmoazkogf0005tqek9iuc6cfw",
+									"type": "text",
+									"uuid": "f862e716-98a8-4238-8a82-05937fdaafc5"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/pages/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"pages",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "40330009-81390123-cc0e-43f4-9b81-b300a159001a"
+		},
+		{
+			"name": "PagesSection",
+			"item": [
+				{
+					"name": "all pages Section",
+					"id": "40330009-36fbdbcd-1277-405d-a136-92073c03cf1d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "csrf-token",
+								"value": "UVFQsCfY-Rihq0L_xLYxr1tUGo0dosm6RzwA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "cmo9syl75000ftq5k8dlbqkjd",
+									"type": "text",
+									"uuid": "ea7c08b4-8486-4696-8be1-bb585d8a4426",
+									"disabled": true
+								},
+								{
+									"key": "pageId",
+									"value": "cmo9s50y40000tqrsqb6w0e9s",
+									"type": "text",
+									"uuid": "4cfb22c1-1152-4a59-bde3-a805d4c6026b",
+									"disabled": true
+								},
+								{
+									"key": "order",
+									"value": "View instructor profiles",
+									"type": "text",
+									"uuid": "dc3cb654-2698-423a-96f0-c4d0ab876834",
+									"disabled": true
+								},
+								{
+									"key": "title",
+									"value": "",
+									"type": "text",
+									"uuid": "f443a93c-4bd5-443b-8251-aa4a257042a5",
+									"disabled": true
+								},
+								{
+									"key": "key",
+									"value": "",
+									"type": "text",
+									"uuid": "555bf5c5-6678-4b0f-9cad-9f4b372fec3a",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/pages-section",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"pages-section"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "manage pages section",
+					"id": "40330009-51161fd1-5e06-45d6-a681-76d747453ba0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text",
+									"uuid": "738e5047-3a68-4f9e-a858-75ab2873e6c3",
+									"disabled": true
+								},
+								{
+									"key": "pageId",
+									"value": "cmoazk37w0004tqek8658d5fz",
+									"type": "text",
+									"uuid": "aa7c8f6c-fa95-43bc-856e-12fc81ae6678"
+								},
+								{
+									"key": "order",
+									"value": "1",
+									"type": "text",
+									"uuid": "f269fc30-b6d7-4a10-acf1-570a7b5cad78"
+								},
+								{
+									"key": "title",
+									"value": "login",
+									"type": "text",
+									"uuid": "acfe21ad-c2ce-442e-81ff-fc32ff2d03a8"
+								},
+								{
+									"key": "key",
+									"value": "login",
+									"type": "text",
+									"uuid": "a0a75d35-35bf-48e3-be21-0b689af6d5c1"
+								},
+								{
+									"key": "data",
+									"value": "{\"title\": \"GetSurf Smart Lead Management System\",\"description\": \"Access your Interoly Inventory Management system to track stock levels, manage orders, and streamline your supply chain. Sign in to stay in control of your inventory anytime, anywhere.\",\"loginImages\": [\"https://res.cloudinary.com/dscqp4wwt/image/upload/v1776920764/RMSYM/loginImages/mvgmfx9e0nws7dzmumhp.jpg\",   \"https://res.cloudinary.com/dscqp4wwt/image/upload/v1776920764/RMSYM/loginImages/svqipgluxgvzlawtjcxm.webp\",\"https://res.cloudinary.com/dscqp4wwt/image/upload/v1776920763/RMSYM/loginImages/csw5qzwsmxwmys1dyl9y.jpg\",\"https://res.cloudinary.com/dscqp4wwt/image/upload/v1776920764/RMSYM/loginImages/opijjasmtitkwdhgkkbf.jpg\",   \"https://res.cloudinary.com/dscqp4wwt/image/upload/v1776920764/RMSYM/loginImages/qoyt6cf8gqzzxdphzpw9.jpg\",\"https://res.cloudinary.com/dscqp4wwt/image/upload/v1776920764/RMSYM/loginImages/xtijfdagy4lphphqua0h.jpg\",    \"https://res.cloudinary.com/dscqp4wwt/image/upload/v1776920764/RMSYM/loginImages/pxrzdrfo3ibpea4mqokz.jpg\"]}",
+									"type": "text",
+									"uuid": "3854c2d5-28b8-4eef-8d6f-4279fb634b26"
+								},
+								{
+									"key": "isPublished",
+									"value": "true",
+									"description": "true/false",
+									"type": "text",
+									"uuid": "59a5f434-776e-4a5e-860d-11f2e37ce70c"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/pages-section",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"pages-section"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete beach page",
+					"id": "40330009-aa9646d1-5c68-4136-bc82-8934a7ff49cb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "cmo9sb0bm0001tqootjc1216i",
+									"type": "text",
+									"uuid": "f862e716-98a8-4238-8a82-05937fdaafc5"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/pages-section",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"pages-section"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "40330009-ea27072e-fef1-43a0-bd31-c6c8a2638a99"
+		},
+		{
+			"name": "dashboard",
+			"item": [
+				{
+					"name": "/statastics",
+					"id": "40330009-8aea18dc-13a4-4547-8d60-4be65ba3c620",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "csrf-token",
+								"value": "UVFQsCfY-Rihq0L_xLYxr1tUGo0dosm6RzwA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "e7d0a9cd-457d-4b31-8a25-fdc7de943e7f",
+									"type": "text",
+									"uuid": "ea7c08b4-8486-4696-8be1-bb585d8a4426"
+								},
+								{
+									"key": "instructorId",
+									"value": "cmobbqcte0007tqmwtxg7e00j",
+									"type": "text",
+									"uuid": "b1eeaa8c-bc86-4b6d-94f9-66515a27f59d",
+									"disabled": true
+								},
+								{
+									"key": "beachId",
+									"value": "cmo9s50y40000tqrsqb6w0e9s",
+									"type": "text",
+									"uuid": "b5e0d50a-6aef-461a-97d6-f21e1453611b",
+									"disabled": true
+								},
+								{
+									"key": "skillLevel",
+									"value": "BEGINNER",
+									"type": "text",
+									"uuid": "a0d900a7-33ef-4153-9aec-e57ee6787e56",
+									"disabled": true
+								},
+								{
+									"key": "preferredDate",
+									"value": "2026-05-23T00:00:00.000Z",
+									"type": "text",
+									"uuid": "fc84030c-c141-485d-9949-b1f8cc535e5f",
+									"disabled": true
+								},
+								{
+									"key": "message",
+									"value": "",
+									"type": "text",
+									"uuid": "670ac176-1b91-4b69-8bd5-2b4ef4d1f339",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "ACCEPTED",
+									"type": "text",
+									"uuid": "a88a27a6-8aee-4dbc-993f-ab9d73b66e71"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/dashboard/statastics",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"dashboard",
+								"statastics"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/account-info",
+					"id": "40330009-4e6f0e5f-736a-487b-bc82-6eb0e0cc243e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "csrf-token",
+								"value": "UVFQsCfY-Rihq0L_xLYxr1tUGo0dosm6RzwA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "e7d0a9cd-457d-4b31-8a25-fdc7de943e7f",
+									"type": "text",
+									"uuid": "ea7c08b4-8486-4696-8be1-bb585d8a4426"
+								},
+								{
+									"key": "instructorId",
+									"value": "cmobbqcte0007tqmwtxg7e00j",
+									"type": "text",
+									"uuid": "b1eeaa8c-bc86-4b6d-94f9-66515a27f59d",
+									"disabled": true
+								},
+								{
+									"key": "beachId",
+									"value": "cmo9s50y40000tqrsqb6w0e9s",
+									"type": "text",
+									"uuid": "b5e0d50a-6aef-461a-97d6-f21e1453611b",
+									"disabled": true
+								},
+								{
+									"key": "skillLevel",
+									"value": "BEGINNER",
+									"type": "text",
+									"uuid": "a0d900a7-33ef-4153-9aec-e57ee6787e56",
+									"disabled": true
+								},
+								{
+									"key": "preferredDate",
+									"value": "2026-05-23T00:00:00.000Z",
+									"type": "text",
+									"uuid": "fc84030c-c141-485d-9949-b1f8cc535e5f",
+									"disabled": true
+								},
+								{
+									"key": "message",
+									"value": "",
+									"type": "text",
+									"uuid": "670ac176-1b91-4b69-8bd5-2b4ef4d1f339",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "ACCEPTED",
+									"type": "text",
+									"uuid": "a88a27a6-8aee-4dbc-993f-ab9d73b66e71"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/dashboard/account-info",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"dashboard",
+								"account-info"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/recent-activity",
+					"id": "40330009-0701ea09-59f0-4e8a-a66c-a42f4d697b1a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "csrf-token",
+								"value": "UVFQsCfY-Rihq0L_xLYxr1tUGo0dosm6RzwA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "e7d0a9cd-457d-4b31-8a25-fdc7de943e7f",
+									"type": "text",
+									"uuid": "ea7c08b4-8486-4696-8be1-bb585d8a4426"
+								},
+								{
+									"key": "instructorId",
+									"value": "cmobbqcte0007tqmwtxg7e00j",
+									"type": "text",
+									"uuid": "b1eeaa8c-bc86-4b6d-94f9-66515a27f59d",
+									"disabled": true
+								},
+								{
+									"key": "beachId",
+									"value": "cmo9s50y40000tqrsqb6w0e9s",
+									"type": "text",
+									"uuid": "b5e0d50a-6aef-461a-97d6-f21e1453611b",
+									"disabled": true
+								},
+								{
+									"key": "skillLevel",
+									"value": "BEGINNER",
+									"type": "text",
+									"uuid": "a0d900a7-33ef-4153-9aec-e57ee6787e56",
+									"disabled": true
+								},
+								{
+									"key": "preferredDate",
+									"value": "2026-05-23T00:00:00.000Z",
+									"type": "text",
+									"uuid": "fc84030c-c141-485d-9949-b1f8cc535e5f",
+									"disabled": true
+								},
+								{
+									"key": "message",
+									"value": "",
+									"type": "text",
+									"uuid": "670ac176-1b91-4b69-8bd5-2b4ef4d1f339",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "ACCEPTED",
+									"type": "text",
+									"uuid": "a88a27a6-8aee-4dbc-993f-ab9d73b66e71"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/dashboard/recent-activity",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"dashboard",
+								"recent-activity"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "40330009-04c34d44-c157-430f-947f-b03caa813e6d"
+		},
+		{
+			"name": "mail",
+			"item": [
+				{
+					"name": "/mail",
+					"id": "40330009-4550e14e-5d30-4986-a2e8-33dcc1773e9f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "csrf-token",
+								"value": "UVFQsCfY-Rihq0L_xLYxr1tUGo0dosm6RzwA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Abdullah",
+									"type": "text",
+									"uuid": "3ed68fa0-4784-4bd3-ac8f-8521aee21db1"
+								},
+								{
+									"key": "email",
+									"value": "abdullah107189@gmail.com",
+									"type": "text",
+									"uuid": "4c9047ba-fd47-42a8-851a-21283756595a"
+								},
+								{
+									"key": "subject",
+									"value": " de testing gali",
+									"type": "text",
+									"uuid": "6a1f630e-d2dd-481b-b832-2b8a5bb91c0a"
+								},
+								{
+									"key": "message",
+									"value": "this tis testing messge",
+									"type": "text",
+									"uuid": "741b5bd4-4af7-4913-b5fc-a50bd42d18f8"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/mail",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"mail"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "40330009-02f4d0d7-3afe-415a-b672-48b6db9361af"
+		},
+		{
+			"name": "review",
+			"item": [
+				{
+					"name": "/manage",
+					"id": "40330009-1fd475f2-d22c-43b3-97a3-49b0994f1d04",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "",
+									"type": "text",
+									"uuid": "b1ad5ba9-c24f-43ae-a825-89ad3b560c61",
+									"disabled": true
+								},
+								{
+									"key": "rating",
+									"value": "4",
+									"type": "text",
+									"uuid": "76a6ac28-b2c6-4216-bb47-197d51785d72"
+								},
+								{
+									"key": "comment",
+									"value": "",
+									"type": "text",
+									"uuid": "3426fe6b-a4f9-45cd-9c10-384105ad9509",
+									"disabled": true
+								},
+								{
+									"key": "leadId",
+									"value": "b28a32f3-14e3-4792-b7cc-3151afa31626",
+									"type": "text",
+									"uuid": "3d22c83d-6379-40b0-adaf-5e5aeb5059eb"
+								},
+								{
+									"key": "turistId",
+									"value": "cmobfhuy10001tq3spswa0wqs",
+									"type": "text",
+									"uuid": "acf54bd6-593d-4ec3-aec4-14aee6fe95d1"
+								},
+								{
+									"key": "instructorId",
+									"value": "cmobbqcte0007tqmwtxg7e00j",
+									"type": "text",
+									"uuid": "c58b431d-ef3b-4ff8-9f01-2c9a431dd4f6"
+								},
+								{
+									"key": "beachId",
+									"value": "cmo9s50y40000tqrsqb6w0e9s",
+									"type": "text",
+									"uuid": "5368b755-d9d6-4606-b72f-6a7751b15bfe"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/review/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"review",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all review",
+					"id": "40330009-c5235dab-6449-44a8-b8f1-6cfe44789c57",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/review",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"review"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "40330009-9364b29b-ba6f-4745-acb6-f841282d681a"
+		},
+		{
+			"name": "whatsapp",
+			"item": [
+				{
+					"name": "otp-whatsapp",
+					"id": "40330009-8f6be06f-7cf2-4a4d-ad10-2af388e2ff17",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base}}/whatsapp/otp-whatsapp",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"whatsapp",
+								"otp-whatsapp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verify-whatsapp",
+					"id": "40330009-7ae42652-e055-40bc-b11b-523bde716fc9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "otp",
+									"value": "277856",
+									"type": "text",
+									"uuid": "bc1a059f-a4db-4a0c-9892-9a1697eb1b64"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/whatsapp/verify-whatsapp",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"whatsapp",
+								"verify-whatsapp"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "40330009-613fb768-1e05-4ec8-a51c-16c19e487912"
+		},
+		{
+			"name": "creditPackage",
+			"item": [
+				{
+					"name": "/manage",
+					"id": "40330009-d043664a-511e-4ed5-a02c-1287e7c5164e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "csrf-token",
+								"value": "UVFQsCfY-Rihq0L_xLYxr1tUGo0dosm6RzwA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "0fad35bc-6a1a-4ec4-8604-9d6a2dd65810",
+									"type": "text",
+									"uuid": "ea7c08b4-8486-4696-8be1-bb585d8a4426",
+									"disabled": true
+								},
+								{
+									"key": "credits",
+									"value": "25",
+									"type": "text",
+									"uuid": "b1eeaa8c-bc86-4b6d-94f9-66515a27f59d",
+									"disabled": true
+								},
+								{
+									"key": "bonus",
+									"value": "5",
+									"type": "text",
+									"uuid": "b5e0d50a-6aef-461a-97d6-f21e1453611b",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "100",
+									"type": "text",
+									"uuid": "a0d900a7-33ef-4153-9aec-e57ee6787e56",
+									"disabled": true
+								},
+								{
+									"key": "popular",
+									"value": "true",
+									"type": "text",
+									"uuid": "fc84030c-c141-485d-9949-b1f8cc535e5f",
+									"disabled": true
+								},
+								{
+									"key": "isActive",
+									"value": "true",
+									"type": "text",
+									"uuid": "670ac176-1b91-4b69-8bd5-2b4ef4d1f339",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/credit/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"credit",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/get",
+					"id": "40330009-d2b220aa-8006-4441-8f8b-b09b55f95c21",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "csrf-token",
+								"value": "UVFQsCfY-Rihq0L_xLYxr1tUGo0dosm6RzwA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "isActive",
+									"value": "true",
+									"type": "text",
+									"uuid": "670ac176-1b91-4b69-8bd5-2b4ef4d1f339",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/credit/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"credit",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/delete",
+					"id": "40330009-738efa46-c2f6-4611-8097-433fa45a753d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "csrf-token",
+								"value": "UVFQsCfY-Rihq0L_xLYxr1tUGo0dosm6RzwA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "0fad35bc-6a1a-4ec4-8604-9d6a2dd65810",
+									"type": "text",
+									"uuid": "ea7c08b4-8486-4696-8be1-bb585d8a4426"
+								},
+								{
+									"key": "credits",
+									"value": "5",
+									"type": "text",
+									"uuid": "b1eeaa8c-bc86-4b6d-94f9-66515a27f59d",
+									"disabled": true
+								},
+								{
+									"key": "bonus",
+									"value": "2",
+									"type": "text",
+									"uuid": "b5e0d50a-6aef-461a-97d6-f21e1453611b",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "25",
+									"type": "text",
+									"uuid": "a0d900a7-33ef-4153-9aec-e57ee6787e56",
+									"disabled": true
+								},
+								{
+									"key": "popular",
+									"value": "true",
+									"type": "text",
+									"uuid": "fc84030c-c141-485d-9949-b1f8cc535e5f",
+									"disabled": true
+								},
+								{
+									"key": "isActive",
+									"value": "true",
+									"type": "text",
+									"uuid": "670ac176-1b91-4b69-8bd5-2b4ef4d1f339",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/credit/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"credit",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "40330009-08872e04-9874-45e6-af6d-d9d1b7da6842"
+		},
+		{
+			"name": "creditPurchase",
+			"item": [
+				{
+					"name": "/manage",
+					"id": "40330009-d45cb240-296d-4950-900c-72f2eb93fd78",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "csrf-token",
+								"value": "UVFQsCfY-Rihq0L_xLYxr1tUGo0dosm6RzwA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "cmowhrhoo0002tqe8ubbml5aq",
+									"type": "text",
+									"uuid": "160946c5-2cab-49d4-a516-527edae65ec4"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/payment/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"payment",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/get",
+					"id": "40330009-032d90e7-493a-4346-af54-1b647e028a39",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "csrf-token",
+								"value": "UVFQsCfY-Rihq0L_xLYxr1tUGo0dosm6RzwA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "isActive",
+									"value": "true",
+									"type": "text",
+									"uuid": "670ac176-1b91-4b69-8bd5-2b4ef4d1f339",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/payment/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"payment",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/delete",
+					"id": "40330009-bdffd11f-2fd3-4476-ba8b-4db29dbd65f8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "csrf-token",
+								"value": "UVFQsCfY-Rihq0L_xLYxr1tUGo0dosm6RzwA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "0fad35bc-6a1a-4ec4-8604-9d6a2dd65810",
+									"type": "text",
+									"uuid": "ea7c08b4-8486-4696-8be1-bb585d8a4426"
+								},
+								{
+									"key": "credits",
+									"value": "5",
+									"type": "text",
+									"uuid": "b1eeaa8c-bc86-4b6d-94f9-66515a27f59d",
+									"disabled": true
+								},
+								{
+									"key": "bonus",
+									"value": "2",
+									"type": "text",
+									"uuid": "b5e0d50a-6aef-461a-97d6-f21e1453611b",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "25",
+									"type": "text",
+									"uuid": "a0d900a7-33ef-4153-9aec-e57ee6787e56",
+									"disabled": true
+								},
+								{
+									"key": "popular",
+									"value": "true",
+									"type": "text",
+									"uuid": "fc84030c-c141-485d-9949-b1f8cc535e5f",
+									"disabled": true
+								},
+								{
+									"key": "isActive",
+									"value": "true",
+									"type": "text",
+									"uuid": "670ac176-1b91-4b69-8bd5-2b4ef4d1f339",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/credit/",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"credit",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "40330009-4f9fdfed-8a0c-4f77-8945-7e7aa8b0414e"
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "get",
+					"id": "40330009-7586765b-f7c9-4b5a-927b-f6d6d04b1e7b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "role",
+									"value": "INSTRUCTOR",
+									"type": "text",
+									"uuid": "edc7339a-62bc-499c-a2cb-085dd2d502e9"
+								},
+								{
+									"key": "isVerified",
+									"value": "false",
+									"type": "text",
+									"uuid": "345d7587-7bf0-4d2c-a6fd-0f6f5298ec99"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/users",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "manage",
+					"id": "40330009-bec0d374-461d-4ed7-9d29-53414b19e5bc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "cmp40aort0006tqmw0hfl29d4",
+									"type": "text",
+									"uuid": "edc7339a-62bc-499c-a2cb-085dd2d502e9"
+								},
+								{
+									"key": "isVerified",
+									"value": "true",
+									"type": "text",
+									"uuid": "67cdd636-7b2d-4b40-ad03-e5c50bda8762"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base}}/users",
+							"host": [
+								"{{base}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "cmp40aort0006tqmw0hfl29d4",
+									"disabled": true
+								},
+								{
+									"key": "isVerified",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "40330009-28183f88-931b-4019-b40d-13ac4215ad1e"
+		},
+		{
+			"name": "file upload",
+			"id": "40330009-4de99f9f-dde5-441a-9372-d88f944cd654",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "csrf-token",
+						"value": "UVFQsCfY-Rihq0L_xLYxr1tUGo0dosm6RzwA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "loginImages",
+							"type": "file",
+							"uuid": "7ac97415-55b3-4c4d-8d1e-1969efe546e1",
+							"src": [
+								"/C:/Users/A ALI AHAMMED PRIOM/Desktop/7f937fde-d556-465f-9259-157e731c95eb.jpg",
+								"/C:/Users/A ALI AHAMMED PRIOM/Desktop/64b208d6-1f9c.webp",
+								"/C:/Users/A ALI AHAMMED PRIOM/Desktop/109460845.jpg",
+								"/C:/Users/A ALI AHAMMED PRIOM/Desktop/Passport_Photo_A_Ali_Ahammed_Priom.jpg",
+								"/C:/Users/A ALI AHAMMED PRIOM/Desktop/photo_2025-07-23_16-35-10.jpg",
+								"/C:/Users/A ALI AHAMMED PRIOM/Desktop/photo_2026-03-30_09-02-30.jpg",
+								"/C:/Users/A ALI AHAMMED PRIOM/Desktop/WhatsApp Image 2026-03-29 at 3.17.31 PM.jpeg"
+							]
+						},
+						{
+							"key": "fileRemove",
+							"value": "",
+							"type": "text",
+							"uuid": "80729a6a-20c0-4ce7-8e6a-9debd5c0f905"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base}}/file-upload",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"file-upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "health",
+			"id": "40330009-f77a3463-d64e-4b93-914e-f51cc7b1b3ca",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base}}/health",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				],
+				"id": "6a2c6a45-5776-40e4-82b5-e955899d6a3a"
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"requests": {},
+				"exec": [
+					""
+				],
+				"id": "59387b85-8897-43b4-a7a6-70055e1ea83a"
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base",
+			"value": ""
+		}
+	]
+}
